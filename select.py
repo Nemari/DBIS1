@@ -22,7 +22,7 @@ def select(conn):
     cur.execute(QUERY)
     res = cur.fetchall()
 
-    with open(os.path.join('data', result), 'w', newline='') as csvf:
+    with open(os.path.join('ZNOData', result), 'w', newline='') as csvf:
         csv_writer = csv.writer(csvf, dialect='excel')
         csv_writer.writerow(COLUMNS)
         csv_writer.writerows(res)
