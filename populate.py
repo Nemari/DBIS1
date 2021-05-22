@@ -154,7 +154,7 @@ def populate(conn):
     for name in os.listdir('ZNOData'):
         year = re.findall(r'Odata(\d{4})File.csv', name)
         if year:
-            with open(os.path.join('data', name), encoding='cp1251') as csvfile:
+            with open(os.path.join('ZNOData', name), encoding='cp1251') as csvfile:
                 csv_reader = csv.reader(csvfile, delimiter=';')
 
                 next(csv_reader)
